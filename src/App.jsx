@@ -1,16 +1,16 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css';
-import './chapter.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Login from './Pages/Login';
-import Register from './Pages/Register';
-import Dashboard from './Pages/Dashboard';
-import Header from './Pages/Header';
-import Homepage from './Pages/Homepage';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
+import "./chapter.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Login from "./Pages/Login";
+import Register from "./Pages/Register";
+import Dashboard from "./Pages/Dashboard";
+import Header from "./Pages/Header";
+import Homepage from "./Pages/Homepage";
 import Profile from "./Pages/Profile";
-import Material from "./Pages/Chapter";
-import Chapter from "./Pages/Material";
+import Material from "./Pages/Material";
+import Chapter from "./Pages/Chapter";
 
 function App() {
   return (
@@ -22,8 +22,8 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/homepage" element={<Homepage />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/material" element={<Material />} />
-        <Route path="/material/:chapterId" component={Chapter} />
+        <Route path="/chapters" element={<Chapter />} />
+        <Route path="/material" element={<Material chapterId={1} />} />
         <Route path="/" element={<Homepage />} />
       </Routes>
     </Router>
