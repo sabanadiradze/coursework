@@ -28,6 +28,27 @@ body {
   color: #ccc;
 }
 
+.container.material {
+  max-width: 800px;
+  margin: auto;
+}
+
+.chapter-content {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+}
+
+.chapter-title {
+  font-size: 2.5em;
+  color: #343a40;
+  font-weight: bold;
+}
+
+.chapter-paragraph {
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.6;
+}
 .hover-effect:hover {
   transform: scale(1.05);
 }

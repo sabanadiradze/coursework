@@ -10,6 +10,7 @@ import Header from "./Pages/Header";
 import Homepage from "./Pages/Homepage";
 import Profile from "./Pages/Profile";
 import Material from "./Pages/Material";
+import Chapters from "./Pages/Chapters";
 import Chapter from "./Pages/Chapter";
 
 function App() {
@@ -22,8 +23,9 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/homepage" element={<Homepage />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/chapters" element={<Chapter />} />
+        <Route path="/chapters" element={<Chapters />} />
         <Route path="/material" element={<Material chapterId={1} />} />
+        <Route path="/material/chapter/:id" element={<Chapter />} />
         <Route path="/" element={<Homepage />} />
       </Routes>
     </Router>
