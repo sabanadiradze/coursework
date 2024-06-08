@@ -46,7 +46,7 @@ function Modules() {
 
       <div className="modules">
         {modules.map((module, index) => (
-          <Link to={"/modules/chapters"} key={index}>
+          <Link to={"/modules/" + index + "/chapters"} key={index}>
             <div className="card mb-4 hover-effect">
               <div className="card-body">
                 <h2>{module.title}</h2>

@@ -1,8 +1,25 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { chapter0, chapter1 } from "../constant"; // Adjust the import path as needed
 
 function Chapter() {
+  const { id: chapterId } = useParams();
+
+  // Convert the chapterId to an integer
+  const chapterIndex = parseInt(chapterId, 10);
+
+  // Define a mapping of chapterIndex to chapter data
+  const chapterData = {
+    0: chapter0,
+    1: chapter1,
+  };
+
+  const chapter = chapterData[chapterIndex];
+  if (!chapter) {
+    return <div>Chapter not found</div>;
+  }
+
   return (
     <>
       <div className="container material">
@@ -19,56 +36,13 @@ function Chapter() {
             <div className="card-body">
               <h2>Chapters</h2>
               <ul className="list-group">
-                <li className="list-group-item">
-                  <Link to="/modules/chapter/1">
-                    Chapter 1: What is Cybersecurity?
-                  </Link>
-                </li>
-                <li className="list-group-item">
-                  <Link to="/modules/chapter/2">
-                    Chapter 2: Importance of Cybersecurity
-                  </Link>
-                </li>
-                <li className="list-group-item">
-                  <Link to="/modules/chapter/3">
-                    Chapter 3: Types of Cyber Threats
-                  </Link>
-                </li>
-                <li className="list-group-item">
-                  <Link to="/modules/chapter/4">
-                    Chapter 4: Key Concepts in Cybersecurity
-                  </Link>
-                </li>
-                <li className="list-group-item">
-                  <Link to="/modules/chapter/5">
-                    Chapter 5: Cybersecurity Technologies and Tools
-                  </Link>
-                </li>
-                <li className="list-group-item">
-                  <Link to="/modules/chapter/6">
-                    Chapter 6: Cybersecurity Best Practices
-                  </Link>
-                </li>
-                <li className="list-group-item">
-                  <Link to="/modules/chapter/7">
-                    Chapter 7: Cybersecurity Frameworks and Standards
-                  </Link>
-                </li>
-                <li className="list-group-item">
-                  <Link to="/modules/chapter/8">
-                    Chapter 8: AI and ML in Cybersecurity
-                  </Link>
-                </li>
-                <li className="list-group-item">
-                  <Link to="/modules/chapter/9">
-                    Chapter 9: Emerging Trends in Cybersecurity
-                  </Link>
-                </li>
-                <li className="list-group-item">
-                  <Link to="/modules/chapter/10">
-                    Chapter 10: Career Paths in Cybersecurity
-                  </Link>
-                </li>
+                {Object.keys(chapter).map((key) => (
+                  <li className="list-group-item" key={key}>
+                    <Link to={`/modules/chapter/${chapterId}/${key}`}>
+                      {`Chapter ${key}: ${chapter[key].title}`}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

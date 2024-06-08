@@ -23,9 +23,9 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/homepage" element={<Homepage />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/modules/chapters" element={<Chapters />} />
+        <Route path="/modules/:id/chapters" element={<Chapters />} />
         <Route path="/modules" element={<Modules chapterId={1} />} />
-        <Route path="/modules/chapter/:id" element={<Chapter />} />
+        <Route path="/modules/chapter/:id/:chapter" element={<Chapter />} />
         <Route path="/" element={<Homepage />} />
       </Routes>
     </Router>
