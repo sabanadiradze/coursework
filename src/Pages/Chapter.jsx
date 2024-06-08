@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useParams } from "react-router-dom";
+import {chapters} from "../constant"
 
 function Chapter() {
   const { id } = useParams();
