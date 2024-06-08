@@ -17,55 +17,55 @@ function Chapter() {
         <div className="modules">
           <div className="card mb-4">
             <div className="card-body">
-              <h2>Modules</h2>
+              <h2>Chapters</h2>
               <ul className="list-group">
                 <li className="list-group-item">
-                  <Link to="/material/chapter/1">
+                  <Link to="/modules/chapter/1">
                     Chapter 1: What is Cybersecurity?
                   </Link>
                 </li>
                 <li className="list-group-item">
-                  <Link to="/material/chapter/2">
+                  <Link to="/modules/chapter/2">
                     Chapter 2: Importance of Cybersecurity
                   </Link>
                 </li>
                 <li className="list-group-item">
-                  <Link to="/material/chapter/3">
+                  <Link to="/modules/chapter/3">
                     Chapter 3: Types of Cyber Threats
                   </Link>
                 </li>
                 <li className="list-group-item">
-                  <Link to="/material/chapter/4">
+                  <Link to="/modules/chapter/4">
                     Chapter 4: Key Concepts in Cybersecurity
                   </Link>
                 </li>
                 <li className="list-group-item">
-                  <Link to="/material/chapter/5">
+                  <Link to="/modules/chapter/5">
                     Chapter 5: Cybersecurity Technologies and Tools
                   </Link>
                 </li>
                 <li className="list-group-item">
-                  <Link to="/material/chapter/6">
+                  <Link to="/modules/chapter/6">
                     Chapter 6: Cybersecurity Best Practices
                   </Link>
                 </li>
                 <li className="list-group-item">
-                  <Link to="/material/chapter/7">
+                  <Link to="/modules/chapter/7">
                     Chapter 7: Cybersecurity Frameworks and Standards
                   </Link>
                 </li>
                 <li className="list-group-item">
-                  <Link to="/material/chapter/8">
+                  <Link to="/modules/chapter/8">
                     Chapter 8: AI and ML in Cybersecurity
                   </Link>
                 </li>
                 <li className="list-group-item">
-                  <Link to="/material/chapter/9">
+                  <Link to="/modules/chapter/9">
                     Chapter 9: Emerging Trends in Cybersecurity
                   </Link>
                 </li>
                 <li className="list-group-item">
-                  <Link to="/material/chapter/10">
+                  <Link to="/modules/chapter/10">
                     Chapter 10: Career Paths in Cybersecurity
                   </Link>
                 </li>

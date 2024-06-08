@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import "../Material.css";
 
-function Material() {
+function Modules() {
   const [searchTerm, setSearchTerm] = useState("");
   const [modules, setModules] = useState([
     {
@@ -46,7 +46,7 @@ function Material() {
 
       <div className="modules">
         {modules.map((module, index) => (
-          <Link to={"/chapters"} key={index}>
+          <Link to={"/modules/chapters"} key={index}>
             <div className="card mb-4 hover-effect">
               <div className="card-body">
                 <h2>{module.title}</h2>
@@ -77,4 +77,4 @@ function Material() {
   );
 }
 
-export default Material;
+export default Modules;
