@@ -6,10 +6,8 @@ import { chapter0, chapter1 } from "../constant"; // Adjust the import path as n
 function Chapter() {
   const { id: chapterId } = useParams();
 
-  // Convert the chapterId to an integer
   const chapterIndex = parseInt(chapterId, 10);
 
-  // Define a mapping of chapterIndex to chapter data
   const chapterData = {
     0: chapter0,
     1: chapter1,

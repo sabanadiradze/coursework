@@ -2,10 +2,14 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
 import { Link, useNavigate } from "react-router-dom";
-import handleLogout from "./Dashboard";
+
+function handleLogout() {
+  localStorage.removeItem("authToken");
+}
 
 function Header() {
   const navigate = useNavigate();
+  const isLoggedIn = !!localStorage.getItem("authToken");
 
   const handleLogoutClick = () => {
     handleLogout();
@@ -51,20 +55,30 @@ function Header() {
                 Profile
               </Link>
             </li>
-            <li className="nav-item">
-              <Link
-                onClick={handleLogoutClick}
-                className="nav-link"
-                to="/homepage"
-              >
-                Log Out
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/login">
-                Log in
-              </Link>
-            </li>
+            {isLoggedIn ? (
+              <li className="nav-item">
+                <Link
+                  onClick={handleLogoutClick}
+                  className="nav-link"
+                  to="/homepage"
+                >
+                  Log Out
+                </Link>
+              </li>
+            ) : (
+              <>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/login">
+                    Log in
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/signup">
+                    Register
+                  </Link>
+                </li>
+              </>
+            )}
           </ul>
         </div>
       </div>
