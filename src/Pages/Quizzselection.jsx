@@ -7,7 +7,11 @@ function QuizzSelection() {
   useEffect(() => {
     const fetchQuizzes = async () => {
       try {
-        const response = await fetch("http://localhost:3000/quizzes");
+        const token = localStorage.getItem("authToken");
+        const headers = token ? { Authorization: `Bearer ${token}` } : {};
+        const response = await fetch("http://localhost:3000/quizzes", {
+          headers,
+        });
         const data = await response.json();
         setQuizzes(data);
       } catch (error) {

@@ -2,11 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
 import { Link, useNavigate } from "react-router-dom";
-
-function handleLogout() {
-  localStorage.removeItem("authToken");
-}
-
+import { handleLogout } from "../utils";
 function Header() {
   const navigate = useNavigate();
   const isLoggedIn = !!localStorage.getItem("authToken");
@@ -57,11 +53,7 @@ function Header() {
             </li>
             {isLoggedIn ? (
               <li className="nav-item">
-                <Link
-                  onClick={handleLogoutClick}
-                  className="nav-link"
-                  to="/homepage"
-                >
+                <Link onClick={handleLogoutClick} className="nav-link">
                   Log Out
                 </Link>
               </li>

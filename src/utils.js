@@ -25,6 +25,7 @@ export async function loginStatus() {
 }
 
 export function handleLogout() {
+  console.log("Logging out");
   localStorage.removeItem("authToken");
   location.reload();
 }
