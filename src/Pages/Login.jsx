@@ -5,10 +5,12 @@ import { useNavigate } from "react-router-dom";
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError("");
 
     const response = await fetch("http://127.0.0.1:3000/login", {
       method: "POST",
@@ -25,9 +27,11 @@ function Login() {
       const data = await response.json();
       console.log("Login successful:", data);
       localStorage.setItem("authToken", data.token);
-      navigate("/dashboard");
+      navigate("/");
     } else {
-      console.error("Login failed:", response.statusText);
+      const errorMsg = await response.text();
+      setError(errorMsg);
+      console.error("Login failed:", errorMsg);
     }
   };
 
@@ -35,6 +39,7 @@ function Login() {
     <div className="d-flex justify-content-center align-items-center vh-100">
       <div className="card p-4" style={{ width: "20rem" }}>
         <h3 className="card-title text-center">Login</h3>
+        {error && <div className="alert alert-danger">{error}</div>}
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="username" className="form-label">
@@ -62,15 +67,8 @@ function Login() {
               required
             />
           </div>
-          <button type="submit" className="btn btn-primary w-100 mb-2">
+          <button type="submit" className="btn btn-primary w-100">
             Login
-          </button>
-          <button
-            type="button"
-            className="btn btn-secondary w-100"
-            onClick={() => navigate("/signup")}
-          >
-            Register
           </button>
         </form>
       </div>

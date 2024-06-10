@@ -7,10 +7,12 @@ function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError("");
 
     const response = await fetch("http://127.0.0.1:3000/signup", {
       method: "POST",
@@ -30,7 +32,9 @@ function Register() {
       console.log("Registration successful:", data);
       navigate("/login");
     } else {
-      console.error("Registration failed:", response.statusText);
+      const errorMsg = await response.text();
+      setError(errorMsg);
+      console.error("Registration failed:", errorMsg);
     }
   };
 
@@ -38,6 +42,7 @@ function Register() {
     <div className="d-flex justify-content-center align-items-center vh-100">
       <div className="card p-4" style={{ width: "20rem" }}>
         <h3 className="card-title text-center">Register</h3>
+        {error && <div className="alert alert-danger">{error}</div>}
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="username" className="form-label">
