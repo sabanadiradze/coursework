@@ -1,13 +1,30 @@
 body {
+  font-family: 'Arial', sans-serif; 
+  background-color: #f5f5f5;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-  background-color: #f5f5f5;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column; 
 }
 
 .material {
   padding: 40px 15px;
+  flex: 1;
 }
 
 .material-header {
@@ -16,6 +33,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 30px;
+  margin-top: 30px; 
 }
 
 .card {
@@ -34,18 +52,8 @@ body {
   color: #333;
 }
 
-.card-body h3 {
-  margin-top: 20px;
-  font-size: 1.5rem;
-  color: #007bff;
-}
-
-.progress {
-  height: 20px;
-}
-
-.progress-bar {
-  background-color: #007bff;
+.list-group-item {
+  font-size: 1.2rem;
 }
 
 footer.footer {
@@ -53,6 +61,9 @@ footer.footer {
   padding: 20px 15px;
   background-color: #2a2a2a;
   color: white;
+  width: 100%; 
+  margin-top: auto; 
+  flex-shrink: 0;
 }
 
 .footer a {
@@ -74,18 +85,24 @@ footer.footer {
   padding: 10px;
 }
 
-.modules h3 {
-  margin-top: 20px;
-  font-size: 1.5rem;
+.chapter {
+  padding: 40px 15px;
 }
 
-.modules ul {
-  list-style-type: none;
-  padding: 0;
+.chapter-header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
 }
 
-.modules ul li {
-  padding: 5px 0;
+.chapter-content {
+  font-size: 1.2rem;
+}
+
+.navigation-buttons .btn {
+  font-size: 1.1rem;
 }
 
 @media (max-width: 768px) {

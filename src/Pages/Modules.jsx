@@ -29,46 +29,35 @@ function Modules() {
   const handleSearchChange = (e) => setSearchTerm(e.target.value);
 
   return (
-    <div className="container material">
-      <div className="material-header text-center my-4">
-        <h1 className="display-4">Courses</h1>
-      </div>
-
-      <div className="search-bar my-4">
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Search topics..."
-          value={searchTerm}
-          onChange={handleSearchChange}
-        />
-      </div>
-
-      <div className="modules">
-        {modules.map((module, index) => (
-          <Link to={"/modules/" + index + "/chapters"} key={index}>
-            <div className="card mb-4 hover-effect">
-              <div className="card-body">
-                <h2>{module.title}</h2>
-                <p>{module.description}</p>
+    <div className="home">
+      <div className="container material py-5">
+        <div className="material-header text-center my-4">
+          <h1 className="display-4">Courses</h1>
+        </div>
+        <div className="modules">
+          {modules.map((module, index) => (
+            <Link to={"/modules/" + index + "/chapters"} key={index}>
+              <div className="card mb-4 hover-effect">
+                <div className="card-body">
+                  <h2>{module.title}</h2>
+                  <p>{module.description}</p>
+                </div>
               </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))}
+        </div>
       </div>
-
-      <footer className="footer bg-dark text-white py-3 mt-5">
+      <footer className="footer py-2  fixed-bottom">
         <div className="container text-center">
           <div className="mb-3">
-            <Link to="/faq" className="text-white mx-2">
-              FAQs
-            </Link>
-            <Link to="/support" className="text-white mx-2">
-              Support
-            </Link>
-            <Link to="/feedback" className="text-white mx-2">
-              Feedback
-            </Link>
+            <a href="https://www.facebook.com" className="text-white mx-2">Facebook</a>
+            <a href="https://www.twitter.com" className="text-white mx-2">Twitter</a>
+            <a href="https://www.linkedin.com" className="text-white mx-2">LinkedIn</a>
+          </div>
+          <div className="mb-3">
+            <Link to="/privacy-policy" className="text-white mx-2">Privacy Policy</Link>
+            <Link to="/terms-of-use" className="text-white mx-2">Terms of Use</Link>
+            <Link to="/contact" className="text-white mx-2">Contact</Link>
           </div>
           <p>© {new Date().getFullYear()} BeAware All rights reserved.</p>
         </div>

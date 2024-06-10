@@ -359,20 +359,25 @@ export const chapter1 = {
   },
 };
 
-export const questions0 = [
+export const questions1 = [
   {
     question: "What is the main goal of network security?",
     options: [
       "To reduce network speed",
       "To protect the integrity, confidentiality, and availability of data",
       "To increase network traffic",
-      "To decrease the number of devices on a network",
+      "To decrease the number of devices on a network"
     ],
     answer: 1,
   },
   {
     question: "Which of the following is NOT part of the CIA Triad?",
-    options: ["Confidentiality", "Integrity", "Availability", "Authenticity"],
+    options: [
+      "Confidentiality",
+      "Integrity",
+      "Availability",
+      "Authenticity"
+    ],
     answer: 3,
   },
   {
@@ -381,7 +386,7 @@ export const questions0 = [
       "An attack that alters data",
       "An attack that disrupts services",
       "An attack that involves monitoring network traffic without modifying it",
-      "An attack that impersonates a legitimate user",
+      "An attack that impersonates a legitimate user"
     ],
     answer: 2,
   },
@@ -391,18 +396,17 @@ export const questions0 = [
       "Internet Detection System",
       "Intrusion Detection System",
       "Internal Data System",
-      "Information Defense System",
+      "Information Defense System"
     ],
     answer: 1,
   },
   {
-    question:
-      "Which type of firewall monitors the state of active connections and makes decisions based on the context of traffic?",
+    question: "Which type of firewall monitors the state of active connections and makes decisions based on the context of traffic?",
     options: [
       "Packet-Filtering Firewall",
       "Stateful Inspection Firewall",
       "Proxy Firewall",
-      "Application Firewall",
+      "Application Firewall"
     ],
     answer: 1,
   },
@@ -412,7 +416,7 @@ export const questions0 = [
       "To speed up network traffic",
       "To act as a buffer zone between the internal network and external networks",
       "To host backup data",
-      "To decrease network load",
+      "To decrease network load"
     ],
     answer: 1,
   },
@@ -422,14 +426,18 @@ export const questions0 = [
       "Encrypting large amounts of data quickly",
       "Securing key exchange in symmetric encryption",
       "Speeding up data transmission",
-      "Compressing data",
+      "Compressing data"
     ],
     answer: 1,
   },
   {
-    question:
-      "Which protocol provides secure remote login and secure network services over an insecure network?",
-    options: ["HTTPS", "FTP", "SSH", "Telnet"],
+    question: "Which protocol provides secure remote login and secure network services over an insecure network?",
+    options: [
+      "HTTPS",
+      "FTP",
+      "SSH",
+      "Telnet"
+    ],
     answer: 2,
   },
   {
@@ -438,29 +446,27 @@ export const questions0 = [
       "Use of DES encryption",
       "Improved protection against brute-force attacks",
       "Lack of encryption",
-      "Use of WEP for compatibility",
+      "Use of WEP for compatibility"
     ],
     answer: 1,
   },
   {
-    question:
-      "What is the role of a Security Information and Event Management (SIEM) system?",
+    question: "What is the role of a Security Information and Event Management (SIEM) system?",
     options: [
       "To provide network hardware",
       "To collect, analyze, and correlate security event data",
       "To block all network traffic",
-      "To manage user accounts",
+      "To manage user accounts"
     ],
     answer: 1,
   },
   {
-    question:
-      "Which type of attack involves an attacker pretending to be a legitimate user?",
+    question: "Which type of attack involves an attacker pretending to be a legitimate user?",
     options: [
       "Man-in-the-Middle Attack",
       "Eavesdropping",
       "Masquerade",
-      "Replay Attack",
+      "Replay Attack"
     ],
     answer: 2,
   },
@@ -470,7 +476,7 @@ export const questions0 = [
       "To increase internet speed",
       "To create secure, encrypted tunnels for data transmission",
       "To reduce network costs",
-      "To host public websites",
+      "To host public websites"
     ],
     answer: 1,
   },
@@ -480,7 +486,7 @@ export const questions0 = [
       "A network that does not require any security measures",
       "A security model where no user or device is trusted by default",
       "A network that trusts all devices by default",
-      "A security model that relies solely on firewalls",
+      "A security model that relies solely on firewalls"
     ],
     answer: 1,
   },
@@ -490,7 +496,7 @@ export const questions0 = [
       "Eavesdropping",
       "Rogue Access Points",
       "Evil Twin Attacks",
-      "Packet Switching",
+      "Packet Switching"
     ],
     answer: 3,
   },
@@ -500,7 +506,7 @@ export const questions0 = [
       "To increase data accessibility",
       "To protect sensitive information from unauthorized access",
       "To speed up data processing",
-      "To compress data for storage",
+      "To compress data for storage"
     ],
     answer: 1,
   },
@@ -510,18 +516,17 @@ export const questions0 = [
       "To encrypt data",
       "To perform coordinated attacks using compromised devices",
       "To secure network communications",
-      "To manage cloud resources",
+      "To manage cloud resources"
     ],
     answer: 1,
   },
   {
-    question:
-      "What is a common challenge associated with blockchain technology in network security?",
+    question: "What is a common challenge associated with blockchain technology in network security?",
     options: [
       "Lack of transparency",
       "Scalability issues",
       "Weak encryption",
-      "Limited applicability to network security",
+      "Limited applicability to network security"
     ],
     answer: 1,
   },
@@ -531,49 +536,58 @@ export const questions0 = [
       "To increase network traffic",
       "To proactively search for signs of malicious activity",
       "To slow down data transmission",
-      "To provide network maintenance",
+      "To provide network maintenance"
     ],
     answer: 1,
   },
   {
-    question:
-      "Which of the following tools is used for network traffic analysis?",
-    options: ["Nmap", "Nessus", "Wireshark", "Metasploit"],
+    question: "Which of the following tools is used for network traffic analysis?",
+    options: [
+      "Nmap",
+      "Nessus",
+      "Wireshark",
+      "Metasploit"
+    ],
     answer: 2,
   },
   {
-    question:
-      "What is a key benefit of conducting regular security audits on wireless networks?",
+    question: "What is a key benefit of conducting regular security audits on wireless networks?",
     options: [
       "Increasing network speed",
       "Identifying and addressing vulnerabilities",
       "Reducing network costs",
-      "Enhancing user experience",
+      "Enhancing user experience"
     ],
     answer: 1,
-  },
+  }
 ];
 
 export const chapters = {
   0: chapter0,
-  1: chapter1,
-};
+  1: chapter1
+}
 
-export const questions1 = [
+
+
+export const questions0 = [
   {
     question: "What is the primary goal of cybersecurity?",
     options: [
       "To increase internet speed",
       "To protect information and systems from cyber threats",
       "To reduce the number of devices on a network",
-      "To develop new software",
+      "To develop new software"
     ],
     answer: 1,
   },
   {
-    question:
-      "Which component of cybersecurity ensures that information is accurate and reliable?",
-    options: ["Confidentiality", "Integrity", "Availability", "Authentication"],
+    question: "Which component of cybersecurity ensures that information is accurate and reliable?",
+    options: [
+      "Confidentiality",
+      "Integrity",
+      "Availability",
+      "Authentication"
+    ],
     answer: 1,
   },
   {
@@ -582,7 +596,7 @@ export const questions1 = [
       "Malicious software",
       "Massive software",
       "Managed software",
-      "Modular software",
+      "Modular software"
     ],
     answer: 0,
   },
@@ -592,18 +606,17 @@ export const questions1 = [
       "To monitor network traffic",
       "To convert data into a secure code to prevent unauthorized access",
       "To create backups of data",
-      "To authenticate users",
+      "To authenticate users"
     ],
     answer: 1,
   },
   {
-    question:
-      "Which of the following is an example of a social engineering attack?",
+    question: "Which of the following is an example of a social engineering attack?",
     options: [
       "SQL injection",
       "Phishing",
       "DDoS attack",
-      "Man-in-the-middle attack",
+      "Man-in-the-middle attack"
     ],
     answer: 1,
   },
@@ -613,14 +626,18 @@ export const questions1 = [
       "A vulnerability that is known and has been patched",
       "A vulnerability that is unknown to the software vendor",
       "A vulnerability that occurs on the first day of software release",
-      "A vulnerability that affects only zero-day old systems",
+      "A vulnerability that affects only zero-day old systems"
     ],
     answer: 1,
   },
   {
-    question:
-      "Which type of malware encrypts a user's files and demands payment to restore access?",
-    options: ["Virus", "Worm", "Trojan", "Ransomware"],
+    question: "Which type of malware encrypts a user's files and demands payment to restore access?",
+    options: [
+      "Virus",
+      "Worm",
+      "Trojan",
+      "Ransomware"
+    ],
     answer: 3,
   },
   {
@@ -629,7 +646,7 @@ export const questions1 = [
       "To scan for viruses",
       "To monitor and control incoming and outgoing network traffic",
       "To encrypt data",
-      "To backup data",
+      "To backup data"
     ],
     answer: 1,
   },
@@ -639,29 +656,27 @@ export const questions1 = [
       "Using multiple passwords",
       "Using two or more methods to verify a user's identity",
       "Encrypting data multiple times",
-      "Backing up data to multiple locations",
+      "Backing up data to multiple locations"
     ],
     answer: 1,
   },
   {
-    question:
-      "Which principle of cybersecurity focuses on ensuring that information is available when needed?",
+    question: "Which principle of cybersecurity focuses on ensuring that information is available when needed?",
     options: [
       "Confidentiality",
       "Integrity",
       "Availability",
-      "Non-repudiation",
+      "Non-repudiation"
     ],
     answer: 2,
   },
   {
-    question:
-      "What is the main purpose of an Intrusion Detection System (IDS)?",
+    question: "What is the main purpose of an Intrusion Detection System (IDS)?",
     options: [
       "To prevent intrusions",
       "To detect and alert administrators about suspicious activities",
       "To encrypt data",
-      "To authenticate users",
+      "To authenticate users"
     ],
     answer: 1,
   },
@@ -671,47 +686,48 @@ export const questions1 = [
       "To steal data",
       "To make a network or service unavailable",
       "To install malware",
-      "To authenticate users",
+      "To authenticate users"
     ],
     answer: 1,
   },
   {
-    question:
-      "Which cybersecurity framework includes the functions Identify, Protect, Detect, Respond, and Recover?",
+    question: "Which cybersecurity framework includes the functions Identify, Protect, Detect, Respond, and Recover?",
     options: [
       "ISO/IEC 27001",
       "NIST Cybersecurity Framework",
       "CIS Controls",
-      "GDPR",
+      "GDPR"
     ],
     answer: 1,
   },
   {
-    question:
-      "What is the role of a Security Information and Event Management (SIEM) system?",
+    question: "What is the role of a Security Information and Event Management (SIEM) system?",
     options: [
       "To create backups",
       "To monitor and analyze security events in real-time",
       "To encrypt data",
-      "To perform penetration testing",
+      "To perform penetration testing"
     ],
     answer: 1,
   },
   {
-    question:
-      "What type of attack involves intercepting and altering communications between two parties?",
+    question: "What type of attack involves intercepting and altering communications between two parties?",
     options: [
       "Phishing",
       "Man-in-the-middle (MitM)",
       "SQL injection",
-      "DoS attack",
+      "DoS attack"
     ],
     answer: 1,
   },
   {
-    question:
-      "Which cybersecurity measure involves regularly updating software to patch vulnerabilities?",
-    options: ["Backup", "Encryption", "Patch management", "Access control"],
+    question: "Which cybersecurity measure involves regularly updating software to patch vulnerabilities?",
+    options: [
+      "Backup",
+      "Encryption",
+      "Patch management",
+      "Access control"
+    ],
     answer: 2,
   },
   {
@@ -720,7 +736,7 @@ export const questions1 = [
       "A type of phishing attack",
       "Malware that encrypts data and demands payment for decryption",
       "A network monitoring tool",
-      "A method of data encryption",
+      "A method of data encryption"
     ],
     answer: 1,
   },
@@ -730,7 +746,7 @@ export const questions1 = [
       "To ensure software is up to date",
       "To educate employees about security policies and threats",
       "To monitor network traffic",
-      "To create backups of data",
+      "To create backups of data"
     ],
     answer: 1,
   },
@@ -740,7 +756,7 @@ export const questions1 = [
       "To increase data transmission speed",
       "To provide secure, immutable transactions",
       "To perform data backups",
-      "To authenticate users",
+      "To authenticate users"
     ],
     answer: 1,
   },
@@ -750,10 +766,10 @@ export const questions1 = [
       "Allowing users minimal access necessary to perform their job functions",
       "Giving all users full access to all resources",
       "Backing up data frequently",
-      "Encrypting all data",
+      "Encrypting all data"
     ],
     answer: 0,
-  },
+  }
 ];
 
 export const questions = {

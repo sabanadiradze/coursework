@@ -1,7 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-import "./chapter.css";
+
+import "./Material.css";
+
+
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
@@ -12,6 +16,8 @@ import Profile from "./Pages/Profile";
 import Modules from "./Pages/Modules";
 import Chapters from "./Pages/Chapters";
 import Chapter from "./Pages/Chapter";
+import Quizzes from './Pages/Quizzes';
+import Quizzselection from './Pages/Quizzselection';
 
 function App() {
   return (
@@ -26,6 +32,8 @@ function App() {
         <Route path="/modules/:id/chapters" element={<Chapters />} />
         <Route path="/modules" element={<Modules chapterId={1} />} />
         <Route path="/modules/chapter/:id/:chapter" element={<Chapter />} />
+        <Route path="/quizzes" element={<Quizzselection />} />
+        <Route path="/quizzes/:id" element={<Quizzes />} />
         <Route path="/" element={<Homepage />} />
       </Routes>
     </Router>

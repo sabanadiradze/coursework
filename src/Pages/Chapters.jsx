@@ -1,7 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link, useParams } from "react-router-dom";
-import { chapter0, chapter1 } from "../constant"; // Adjust the import path as needed
+import { chapter0, chapter1 } from "../constant";
+import "../chapter.css";
 
 function Chapter() {
   const { id: chapterId } = useParams();
@@ -19,13 +20,12 @@ function Chapter() {
   }
 
   return (
-    <>
+    <div className="home">
       <div className="container material">
         <div className="material-header text-center my-4">
-          <h1 className="display-4">Introduction to Cybersecurity</h1>
+          <h1 className="display-4">Chapters</h1>
           <p className="lead">
-            Course Description: Learn the basics of cybersecurity, including key
-            concepts, terminology, and practices.
+            Course Description: Make sure to read all of the chapters and don't forget to mark them as "Complete" after finishing it.
           </p>
         </div>
 
@@ -45,27 +45,23 @@ function Chapter() {
             </div>
           </div>
         </div>
-
-        <footer className="footer bg-dark text-white py-3 mt-5">
-          <div className="container text-center">
-            <div className="mb-3">
-              <Link to="/faq" className="text-white mx-2">
-                FAQs
-              </Link>
-              <Link to="/support" className="text-white mx-2">
-                Support
-              </Link>
-              <Link to="/feedback" className="text-white mx-2">
-                Feedback
-              </Link>
-            </div>
-            <p>
-              © {new Date().getFullYear()} [Platform Name]. All rights reserved.
-            </p>
-          </div>
-        </footer>
       </div>
-    </>
+      <footer className="footer py-2  position-sticky">
+        <div className="container text-center">
+          <div className="mb-3">
+            <a href="https://www.facebook.com" className="text-white mx-2">Facebook</a>
+            <a href="https://www.twitter.com" className="text-white mx-2">Twitter</a>
+            <a href="https://www.linkedin.com" className="text-white mx-2">LinkedIn</a>
+          </div>
+          <div className="mb-3">
+            <Link to="/privacy-policy" className="text-white mx-2">Privacy Policy</Link>
+            <Link to="/terms-of-use" className="text-white mx-2">Terms of Use</Link>
+            <Link to="/contact" className="text-white mx-2">Contact</Link>
+          </div>
+          <p>© {new Date().getFullYear()} BeAware All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
   );
 }
 
