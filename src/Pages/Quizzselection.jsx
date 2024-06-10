@@ -22,9 +22,9 @@ function QuizzSelection() {
     <div className="container quiz-selection">
       <h1 className="my-4">Choose a Quiz</h1>
       <ul className="list-group">
-        {quizzes.map((quiz, index) => (
+        {quizzes.map((quiz) => (
           <li key={quiz._id} className="list-group-item">
-            <Link to={`/quizzes/${index + 1}`}>{quiz.title}</Link>
+            <Link to={`/quizzes/${quiz._id}`}>{quiz.title}</Link>
           </li>
         ))}
       </ul>
