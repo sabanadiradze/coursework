@@ -30,6 +30,29 @@ body {
 
 .container.material {
   max-width: 65%;
-  
+
   margin: auto;
+}
+
+.video-card {
+  width: 100%;
+  max-width: 300px; /* Adjust the max-width as needed */
+  margin: 0 auto;
+}
+
+.video-image {
+  width: 100%;
+  height: 200px; /* Fixed height for the image */
+  object-fit: cover; /* Ensure the image covers the area */
+  object-position: center;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-text {
+  flex-grow: 1;
 }

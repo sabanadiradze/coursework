@@ -4,8 +4,6 @@ import "./App.css";
 
 import "./Material.css";
 
-
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
@@ -16,8 +14,9 @@ import Profile from "./Pages/Profile";
 import Modules from "./Pages/Modules";
 import Chapters from "./Pages/Chapters";
 import Chapter from "./Pages/Chapter";
-import Quizzes from './Pages/Quizzes';
-import Quizzselection from './Pages/Quizzselection';
+import Quizzes from "./Pages/Quizzes";
+import Quizzselection from "./Pages/Quizzselection";
+import Videos from "./Pages/Videos";
 
 function App() {
   return (
@@ -34,6 +33,7 @@ function App() {
         <Route path="/modules/chapter/:id/:chapter" element={<Chapter />} />
         <Route path="/quizzes" element={<Quizzselection />} />
         <Route path="/quizzes/:id" element={<Quizzes />} />
+        <Route path="/videos" element={<Videos />} />
         <Route path="/" element={<Homepage />} />
       </Routes>
     </Router>
