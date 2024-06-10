@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../Profile.css";
 import { chapters } from "../constant";
+import { loginStatus } from "../utils";
 
 function Profile() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -18,16 +19,16 @@ function Profile() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const token = localStorage.getItem("authToken");
-    if (!token) {
-      setIsLoggedIn(false);
-    } else {
-      setIsLoggedIn(true);
-      const fetchProfileData = async () => {
-        try {
+    setIsLoggedIn(true);
+    const fetchProfileData = async () => {
+      try {
+        var status = await loginStatus();
+        setIsLoggedIn(status);
+
+        if (status) {
           const response = await axios.get("http://localhost:3000/profile", {
             headers: {
-              Authorization: `Bearer ${token}`,
+              Authorization: `Bearer ${localStorage.getItem("authToken")}`,
             },
           });
           const { username, email, bio, profilePhoto, completedCourses } =
@@ -37,12 +38,12 @@ function Profile() {
           setBio(bio);
           setProfilePhotoUrl("http://localhost:3000" + profilePhoto);
           setCompletedCourses(completedCourses || []);
-        } catch (error) {
-          console.error("Error fetching profile data", error);
         }
-      };
-      fetchProfileData();
-    }
+      } catch (error) {
+        console.error("Error fetching profile data", error);
+      }
+    };
+    fetchProfileData();
   }, []);
 
   const handleProfilePhotoChange = (e) => {
@@ -54,7 +55,6 @@ function Profile() {
   const handleNameChange = (e) => setName(e.target.value);
   const handleEmailChange = (e) => setEmail(e.target.value);
   const handleBioChange = (e) => setBio(e.target.value);
-  const handlePasswordChange = (e) => setPassword(e.target.value);
   const handleNewPasswordChange = (e) => setNewPassword(e.target.value);
 
   const handleSave = async () => {
